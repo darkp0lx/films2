@@ -31,8 +31,8 @@ const Hero = ({ handleLogOut }) => {
     <div>
       <section className="hero">
         <nav>
-          <h2>Welcome</h2>
-          <button onClick={handleLogOut}>logUp</button>
+          <h2>Portal de pelis</h2>
+          <button onClick={handleLogOut}>Salir</button>
         </nav>
         <Search setInput={setInput} />
         <GridFilms loading={loading} films={films} />

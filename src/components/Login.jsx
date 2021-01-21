@@ -40,7 +40,7 @@ const Login = ({
               <button onClick={handleLogin}>sign In</button>
               <p>
                 Dont have a Account?{" "}
-                <span onClick={() => setHasAccount(!hasAccount)}>Sign Up</span>
+                <span onClick={() => setHasAccount(!hasAccount)}>Registrate</span>
               </p>
             </>
           ) : (
@@ -48,7 +48,7 @@ const Login = ({
               <button onClick={handleSignUp}>sign Up</button>
               <p>
                 have an Account?{" "}
-                <span onClick={() => setHasAccount(!hasAccount)}>Sign in</span>
+                <span onClick={() => setHasAccount(!hasAccount)}>iniciar sesión</span>
               </p>
             </>
           )}
