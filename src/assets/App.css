@@ -10,6 +10,13 @@
   display: grid;
   place-items: center;
 }
+.hero nav button{
+  font-weight: bold;
+}
+.hero nav button:hover{
+  background: rgb(63, 9, 124);
+  color:black
+}
 
 .search input::placeholder {
   text-align: center;
@@ -120,7 +127,16 @@ button {
   -moz-box-shadow: 6px -4px 55px 2px rgba(255, 255, 255, 0.86);
   box-shadow: 6px -4px 55px 2px rgba(255, 255, 255, 0.86);
 }
-
+.hero__logo{
+  transform: rotate(20deg);
+  width: 50px;
+}
+.login__logo{
+  transform: rotate(20deg);
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .film .bg {
   width: 100%;
 }
@@ -168,9 +184,18 @@ button {
     gap: 1em;
   }
 }
+@media only screen and (max-width:600px) {
+  .login__logo {
+    width: 150px;
+  }
+  .hero__name{
+    font-size: 15px;
+  }
+}
 
 @media only screen and (min-width:1000px) {
   .films {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
 }

@@ -1,5 +1,5 @@
 import React from "react";
-
+import logo from '../assets/icon-film.png'
 const Login = ({
   email,
   password,
@@ -15,7 +15,13 @@ const Login = ({
   return (
     <section className="login">
       <div className="loginContainer">
-        <label htmlFor="">userName:</label>
+        <img className="login__logo" src={logo} alt="logo peliculas"/>
+        {hasAccount ? (
+          <label htmlFor="">iniciar Sesión:</label>
+        ):(
+          <label htmlFor="">Regístrate:</label>
+
+        )}
         <input
           type="text"
           autoFocus
@@ -24,7 +30,7 @@ const Login = ({
           onChange={(e) => setEmail(e.target.value)}
         />
         <p className="errorMsg">{emailError}</p>
-        <label htmlFor="">password</label>
+        <label htmlFor="">Contraseña:</label>
         <input
           type="password"
           required
@@ -37,17 +43,17 @@ const Login = ({
         <div className="btnContainer">
           {hasAccount ? (
             <>
-              <button onClick={handleLogin}>sign In</button>
+              <button onClick={handleLogin}>Iniciar sesión</button>
               <p>
-                Dont have a Account?{" "}
-                <span onClick={() => setHasAccount(!hasAccount)}>Registrate</span>
+                no tienes una cuenta?{" "}
+                <span onClick={() => setHasAccount(!hasAccount)}>Regístrate</span>
               </p>
             </>
           ) : (
             <>
-              <button onClick={handleSignUp}>sign Up</button>
+              <button onClick={handleSignUp}>Registrarse</button>
               <p>
-                have an Account?{" "}
+                tienes una cuenta?{" "}
                 <span onClick={() => setHasAccount(!hasAccount)}>iniciar sesión</span>
               </p>
             </>
